@@ -4,7 +4,8 @@ orbs:
   node: circleci/node@4.1
 
 workflows:
-  sample:
+  testlint:
     jobs:
-      - node/test:
-          version: '16'
+      - node/test
+      - node/run:
+          npm-run: lint
