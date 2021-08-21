@@ -1,0 +1,80 @@
+{
+  "name": "fontawesome-svg-mdi",
+  "version": "0.0.1",
+  "description": "A tool to allow you to use Material Design Icons with the Fontawesome SVG javascript library",
+  "exports": "lib/mdi-fa.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --ext .js ./",
+    "build": "babel src -d lib",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjdavey/fontawesome-mdi.git"
+  },
+  "author": "Tristan Davey <tristan@tristandavey.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjdavey/fontawesome-mdi/issues"
+  },
+  "homepage": "https://github.com/tjdavey/fontawesome-mdi#readme",
+  "peerDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@mdi/js": "^5.9.55"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@mdi/js": "^5.9.55",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-jest": "^24.4.0",
+    "jest": "^27.0.6",
+    "jsdom": "^17.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/mocks/dom.js"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "standard",
+      "plugin:jest/recommended"
+    ],
+    "plugins": [
+      "jest"
+    ],
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
