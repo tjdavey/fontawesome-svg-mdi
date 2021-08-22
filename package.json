@@ -1,6 +1,6 @@
 {
   "name": "fontawesome-svg-mdi",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A tool to allow you to use Material Design Icons with the Fontawesome SVG javascript library",
   "exports": "lib/mdi-fa.js",
   "type": "module",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tjdavey/fontawesome-mdi.git"
+    "url": "git+https://github.com/tjdavey/fontawesome-svg-mdi.git"
   },
   "author": "Tristan Davey <tristan@tristandavey.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tjdavey/fontawesome-mdi/issues"
+    "url": "https://github.com/tjdavey/fontawesome-svg-mdi/issues"
   },
-  "homepage": "https://github.com/tjdavey/fontawesome-mdi#readme",
+  "homepage": "https://github.com/tjdavey/fontawesome-svg-mdi#readme",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
