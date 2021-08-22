@@ -8,6 +8,6 @@ workflows:
   test-lint:
     jobs:
       - node/test
-      - node/lint:
+      - node/run:
           npm-run: lint
       - coveralls/upload
