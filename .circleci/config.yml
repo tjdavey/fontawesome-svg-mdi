@@ -2,10 +2,12 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.7
+  coveralls: coveralls/coveralls@1.0.6
 
 workflows:
   test-lint:
     jobs:
       - node/test
-      - node/run:
+      - node/lint:
           npm-run: lint
+      - coveralls/upload
