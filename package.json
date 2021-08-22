@@ -1,9 +1,8 @@
 {
   "name": "fontawesome-svg-mdi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to allow you to use Material Design Icons with the Fontawesome SVG javascript library",
-  "exports": "lib/mdi-fa.js",
-  "type": "module",
+  "module": "lib/mdi-fa.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint --ext .js ./",
@@ -28,6 +27,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@mdi/js": "^5.9.55",
     "babel-jest": "^27.0.6",
+    "babel-plugin-add-module-exports": "^1.0.4",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.1",
@@ -75,6 +75,10 @@
           }
         }
       ]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs",
+      "add-module-exports"
     ]
   }
 }
