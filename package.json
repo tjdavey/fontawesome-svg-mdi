@@ -8,7 +8,8 @@
     "test": "jest",
     "lint": "eslint --ext .js ./",
     "build": "babel src -d lib",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",

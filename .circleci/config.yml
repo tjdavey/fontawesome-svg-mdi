@@ -10,4 +10,10 @@ workflows:
       - node/test
       - node/run:
           npm-run: lint
-      - coveralls/upload
+      - coverage:
+        executor: node/default
+        steps:
+          - checkout
+          - node/install-packages
+          - run: npm run coverage
+          - coveralls/upload
